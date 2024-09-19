@@ -13,7 +13,7 @@ Task Manager is an open-source Laravel application designed to simplify the proc
 
 ### Step 1: Clone the Repository
 ```
-git clone https://github.com/arafat-web/Task-Manager.git
+git clone https://github.com/soumiksen2020/task_management.git
 cd Task-Manager
 ```
 
@@ -54,25 +54,8 @@ Task Manager allows users to efficiently manage projects and tasks through a use
     Email: admin@example.com
     Password: 123456
     ```
-
 2. **Projects:**
-   - Create and manage multiple projects.
-   - Assign tasks to specific projects to keep everything organized.
-
+   - Create and manage multiple Tasks.
+   
 3. **Tasks:**
-   - Add, edit, and delete tasks within a project.
-   - Use drag-and-drop functionality to move tasks between different stages or statuses.
-
-4. **Notes:**
-   - Attach notes to tasks or projects for additional details and context.
-   - Keep track of important information that doesn't fit into tasks.
-
-5. **Reminders:**
-   - Set reminders for tasks to ensure deadlines are met.
-
-6. **Routines:**
-   - Define routine tasks that need to be done regularly.
-
-7. **Files:**
-   - Upload and attach files to tasks or projects.
-   - Easily access all necessary documents and resources in one place.
+   - Add, edit, and delete tasks within a project.   
