@@ -52,7 +52,7 @@ Task Manager allows users to efficiently manage projects and tasks through a use
 1. **Login to the admin panel:**
     ```
     Email: admin@example.com
-    Password: secret
+    Password: 123456
     ```
 
 2. **Projects:**
