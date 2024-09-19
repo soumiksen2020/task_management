@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('title')
-    Create Project
+    Create Task
 @endsection
 @section('content')
     <div class="container mb-3">
-        <h2 class="mb-4 shadow-sm p-3 rounded bg-white">Create Project</h2>
+        <h2 class="mb-4 shadow-sm p-3 rounded bg-white">Create Task</h2>
         <div class="card border-0 shadow-sm m-auto" style="max-width: 600px;">
             <div class="card-body">
                 <form action="{{ route('projects.store') }}" method="POST">
@@ -38,11 +38,11 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="status" class="form-label">Status</label>
-                        <select name="status" id="status" class="form-select" required>
-                            <option value="not_started">Not Started</option>
-                            <option value="in_progress">In Progress</option>
-                            <option value="completed">Completed</option>
+                        <label for="priority" class="form-label">Priority level</label>
+                        <select name="priority" id="priority" class="form-select" required>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
                         </select>
                         @error('status')
                             <span class="text-danger">{{ $message }}</span>
@@ -55,7 +55,7 @@
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
-                    <button type="submit" class="btn btn-primary">Create Project</button>
+                    <button type="submit" class="btn btn-primary">Create Task</button>
                 </form>
             </div>
         </div>

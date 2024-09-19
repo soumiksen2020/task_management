@@ -63,14 +63,21 @@
             <div class="card border-0 shadow-sm">
                 <div class="card-header text-center p-4 fs-1">
                     <img src="{{ asset('assets/img/logo-horizontal.png') }}" class="img-fluid" alt="task manager">
-					Login
+					Registration
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('register') }}">
                         @csrf
+						<div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="name" name="name" id="name" class="form-control" placeholder="user mame" required autofocus>
+                            @error('name')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" name="email" id="email" class="form-control" placeholder="admin@example.com" required autofocus>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="admin@example.com" required>
                             @error('email')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
@@ -82,21 +89,16 @@
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" name="remember" id="remember" class="form-check-input">
-                            <label for="remember" class="form-check-label">Remember Me</label>
-                        </div>
                         <div class="d-grid mb-4">
-                            <button type="submit" class="btn btn-primary">Login</button>
+                            <button type="submit" class="btn btn-primary">Register</button>
                         </div>
 						<div class="mb-3">
 							<form method="POST" action="{{ route('register') }}" id="logout-form">
-								<label for="Signup" class="form-check-label">Don't have an account?</label> 
-								<a href="/register" style="color: #495057; font-weight: bold; text-decoration: none;">Signup now</a>
+								<label for="Signup" class="form-check-label">Already have an account?</label> 
+								<a href="/login" style="color: #495057; font-weight: bold; text-decoration: none;">Login now</a>
 								<!-- <button type="submit" class="dropdown-item">Signup now</button> -->
 							</form>
 						</div>
-						
                     </form>
                 </div>
 

@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('title')
-    {{ $project->name }} Edit Project
+    {{ $project->name }} Edit Task
 @endsection
 @section('content')
     <div class="container">
-        <h2 class="mb-4 shadow-sm p-3 rounded bg-white">Edit Project</h2>
+        <h2 class="mb-4 shadow-sm p-3 rounded bg-white">Edit Task</h2>
         <div class="card border-0 shadow-sm m-auto" style="max-width: 600px;">
             <div class="card-body">
                 <form action="{{ route('projects.update', $project->id) }}" method="POST">
@@ -43,14 +43,22 @@
                     </div>
                     
                     <div class="mb-3">
+                        <label for="priority" class="form-label">Priority level</label>
+                        <select name="priority" id="priority" class="form-select" required>
+                            <option value="low" {{ $project->priority == 'low' ? 'selected' : '' }}>Low</option>
+                            <option value="medium" {{ $project->priority == 'medium' ? 'selected' : '' }}>Medium</option>
+                            <option value="high" {{ $project->priority == 'high' ? 'selected' : '' }}>High
+                            </option>
+                        </select>
+                        @error('status')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+					<div class="mb-3">
                         <label for="status" class="form-label">Status</label>
                         <select name="status" id="status" class="form-select" required>
-                            <option value="not_started" {{ $project->status == 'not_started' ? 'selected' : '' }}>Not
-                                Started</option>
-                            <option value="in_progress" {{ $project->status == 'in_progress' ? 'selected' : '' }}>In
-                                Progress</option>
-                            <option value="completed" {{ $project->status == 'completed' ? 'selected' : '' }}>Completed
-                            </option>
+                            <option value="pending" {{ $project->status == 'pending' ? 'selected' : '' }}>Pending</option>
+                            <option value="complete" {{ $project->status == 'complete' ? 'selected' : '' }}>Complete</option>
                         </select>
                         @error('status')
                             <span class="text-danger">{{ $message }}</span>
@@ -64,7 +72,7 @@
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
-                    <button type="submit" class="btn btn-primary">Update Project</button>
+                    <button type="submit" class="btn btn-primary">Update Task</button>
                 </form>
             </div>
         </div>

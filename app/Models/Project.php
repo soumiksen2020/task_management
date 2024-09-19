@@ -15,6 +15,7 @@ class Project extends Model
         'description',
         'start_date',
         'end_date',
+		'priority',
         'status',
         'budget',
     ];
@@ -44,7 +45,7 @@ class Project extends Model
         return $this->hasMany(File::class);
     }
 
-    public function getStatusAttribute()
+    /*public function getStatusAttribute()
     {
         $today = Carbon::now();
 
@@ -58,7 +59,7 @@ class Project extends Model
         }
 
         return 'on_going';
-    }
+    }*/
 
     public function teamProjects()
     {

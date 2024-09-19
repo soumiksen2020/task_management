@@ -117,45 +117,13 @@
                     <i class="bi bi-house-door"></i> Home
                 </a>
             </li>
-            {{-- <li class="nav-item">
-                <a class="nav-link {{ request()->is('mail*') ? 'active' : '' }}" href="{{ route('mail.inbox') }}">
-                    <i class="bi bi-inbox"></i> Inbox
-                </a>
-            </li> --}}
             <li class="nav-item">
                 <a class="nav-link {{ request()->is('projects*') ? 'active' : '' }}"
                     href="{{ route('projects.index') }}">
-                    <i class="bi bi-folder"></i> Projects
+                    <i class="bi bi-folder"></i> Tasks
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {{ request()->is('tasks*') ? 'active' : '' }}" href="{{ route('projects.index') }}">
-                    <i class="bi bi-check2-square"></i> Tasks
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {{ request()->is('routines*') ? 'active' : '' }}"
-                    href="{{ route('routines.index') }}">
-                    <i class="bi bi-calendar-check"></i> Routines
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {{ request()->is('notes*') ? 'active' : '' }}" href="{{ route('notes.index') }}">
-                    <i class="bi bi-sticky"></i> Notes
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {{ request()->is('reminders*') ? 'active' : '' }}"
-                    href="{{ route('reminders.index') }}">
-                    <i class="bi bi-bell"></i> Reminders
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {{ request()->is('files*') ? 'active' : '' }}" href="{{ route('files.index') }}">
-                    <i class="bi bi-file"></i> Files
-                </a>
-            </li>
-        </ul>
+         </ul>
     </div>
     <div class="content d-flex flex-column">
         <header class="topnav mb-4">
@@ -177,7 +145,6 @@
                                     {{ Auth::user()->name }}
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                                    <li><a class="dropdown-item" href="#">Settings</a></li>
                                     <li>
                                         <form method="POST" action="{{ route('logout') }}" id="logout-form">
                                             @csrf
@@ -196,8 +163,7 @@
         </main>
         <footer class="mt-auto py-3 text-center">
             <div class="container">
-                <span class="text-muted">&copy; {{ date('Y') }} Task Manager | Developed by <a
-                        href="https://github.com/arafat-web" target="_blank">Arafat Hossain Ar</a> </span>
+                <span class="text-muted">&copy; {{ date('Y') }} Task Manager | Developed by Soumik Sen</a> </span>
             </div>
         </footer>
     </div>
