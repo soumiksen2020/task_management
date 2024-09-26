@@ -15,7 +15,7 @@ This documentation provides a step-by-step guide on how to set up the project.
 
 ### Step 1: Clone the Repository
 ```
-git clone https://github.com/arafat-web/Task-Manager.git
+git clone https://github.com/soumiksen2020/task_management
 cd Task-Manager
 ```
 
